@@ -25,16 +25,11 @@ const MovieList = props => {
   return (
     <div className="movie-list">
       {movies.map(movie => (
-        <MovieDetails key={movie.id} movie={movie} />
+        <MovieCard movie={movie} key={movie.id}/>
       ))}
     </div>
   );
 }
 
-function MovieDetails({ movie }) {
-  return (
-    <MovieCard movie={movie}/>
-  );
-}
 
 export default MovieList;
